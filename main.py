@@ -36,8 +36,10 @@ class ClassRoom:
         if ClassRoom.avg(self)['avg_h'] > ClassRoom.avg(other)['avg_h']:
             print(f'A')
         elif ClassRoom.avg(self)['avg_h'] == ClassRoom.avg(other)['avg_h']:
-            if ClassRoom.avg(self)['avg_w'] >= ClassRoom.avg(other)['avg_w']:
+            if ClassRoom.avg(self)['avg_w'] > ClassRoom.avg(other)['avg_w']:
                 print(f"A")
+            elif ClassRoom.avg(self)['avg_w'] == ClassRoom.avg(other)['avg_w']:
+                print('Same')
             else:
                 print(f'B')
         else:
